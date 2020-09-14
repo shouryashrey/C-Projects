@@ -16,14 +16,16 @@ void swap(int *a,int *b)
     *b=z;
 }
 
-void bubblesort(int a[],int n)
+void bubblesort(int a[],char b[],int c[],int n)
 {
     for(int i=0;i<n-1;i++)
     {
         for(int j=0;j<n-1-i;j++)
         {
-            if (a[j]>a[j+1]) {
+            if (a[j]<a[j+1]) {
                 swap(a[j],a[j+1]);
+                swap(b[j],b[j+1]);
+                swap(c[j],c[j+1]);
             }
         }
     }
